@@ -1,0 +1,269 @@
+@import 'style';
+
+// Sections ======================================
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// Navigation ====================================
+
+.navigation {
+  padding: 20px 0;
+  font-size: 0.9em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navigation .container {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.navigation .container:before,
+.navigation .container:after {
+  content: "";
+  display: none;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+
+  width: 30px;
+  height: 22px;
+}
+
+.burger .burger__line {
+  // display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $color-green;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.navigation .list__inline li {
+  padding: 5px 5px;
+  margin-left: 20px;
+}
+
+.navigation h1 {
+  margin: 0;
+  padding: 0;
+}
+
+// Banner ========================================
+
+.banner {
+  position: relative;
+}
+
+.banner .container {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+  position: relative;
+  height: 100vh;
+}
+
+.banner .brand {
+  color: $primary-text-color;
+  margin: 0;
+  font-size: 1.9em;
+  font-weight: $weight-thin;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.banner .bordered {
+  font-size: 1.2em;
+  font-weight: $weight-thin;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 20px;
+}
+
+.banner .quote {
+  width: 70%;
+  span {
+    font-weight: $weight-bold;
+  }
+}
+
+// About ===========================================
+
+.action {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#about-us {
+  padding-right: 10%;
+}
+
+// Services ========================================
+
+#services {
+  .grid-cell {
+    $cell-size: calc(100% / 2);
+    width: $cell-size;
+
+    display: flex;
+  	flex-direction: column;
+	  flex-wrap: wrap;
+	  justify-content: flex-start;
+	  align-items: center;
+	  align-content: stretch;
+
+    .image-responsive {
+      margin-bottom: 5px;
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+// workflow ========================================
+
+.workflow div[class^="col-"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+
+  margin-bottom: 20px;
+
+  h3 {
+    margin-top: 0;
+  }
+  div {
+    margin-left: 30px;
+  }
+}
+
+// Projects ========================================
+
+.projects div[class^="col-"] {
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.projects .action {
+  margin-top: 5px;
+}
+
+// Contact =========================================
+
+.contact form {
+  margin-top: 1em;
+
+  input {
+    margin-bottom: 5px;
+    padding-left: 0px;
+    border: none;
+    border-bottom: 1px solid $divider-color;
+  }
+  textarea {
+    margin-top: 10px;
+    padding-left: 0px;
+    border: none;
+    border-bottom: 1px solid $divider-color;
+  }
+}
+
+.contact .container {
+  .headings {
+    padding-right: 10%;
+  }
+}
+
+// Media Queries ================================================
+
+
+@media (max-width: 767px) {}
+
+@media (max-width: 448px) {
+
+  // About Us =================
+  #about-us {
+    padding-right: 0;
+  }
+
+  // Services =================
+  #services .grid-cell .image-responsive {
+    width: 60%;
+  }
+}
+
+@media (max-width: 479px) {
+
+  // COntact Us ===============
+  .contact .container {
+    form {
+      margin-left: 0px;
+      margin-right:  0px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  // Services ================
+  #services .grid-cell .image-responsive {
+    width: 60%;
+  }
+}
+
+@media (min-width: 449px) and (max-width: 767px) {
+
+  // Services =================
+  #services {
+    margin-top: 40px;
+    h2 { margin-top: 0; }
+    .services-icons { margin-top: 5px; }
+
+    .grid-cell {
+      width: calc(100% / 4);
+      .image-responsive { width: 70%; }
+    }
+  }
+
+  // COntact Us ===============
+  .contact .container {
+    form {
+      margin-left: 10%;
+      margin-right:  10%;
+    }
+    .headings {
+      padding-left: 10%;
+      padding-right: 10%;
+
+      text-align: center;
+      h2 { margin-bottom: 5px; }
+    }
+  }
+}
