@@ -1,0 +1,31 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>git-command.md</title>
+      </head>
+      <body>
+        <h1 id="git-commands">Git Commands</h1>
+<h2 id="basic-concepts">Basic concepts</h2>
+<h3 id="remote-repository-repo">Remote Repository / Repo</h3>
+<p>Remote repository is your repo / project in the web / cloud. That&#39;s your main location for you projects/repo.</p>
+<h3 id="local-repository">Local Repository</h3>
+<p>Local repository is your repo / project inside your local machine.</p>
+<h3 id="clone">Clone</h3>
+<p>Cloning is downloading / copying your project from the remote repo to your local machine, thus making newly cloned repo a local repo. Files and folders from your remote repo is copied.</p>
+<p>Before you can edit a repo / project from the remote location, you must clone it first to your local machine.</p>
+<h3 id="commit">Commit</h3>
+<p>If you have any changes to your project files in your workspace and wants to override the previous remote files with the new one, you must first commit those changes. It&#39;s like saving all those files you modified and include those files to the new modified remote repo.</p>
+<h3 id="push">Push</h3>
+<p>Push is uploading your new or modified files to the remote repo to override. Remember commit is <em>NOT</em> sending your modified files to the remote repo, it only saves and includes the file(s) to be finally pushed.</p>
+<h3 id="pull">Pull</h3>
+<p>If someone other than you push their commits so that the remote repo are now modified, and you want to have those changes in your local repo also before committing or pushing, then you must pull those changes to your local repo.</p>
+<h2 id="initializing-a-repository-creating-a-project">Initializing a repository / creating a project</h2>
+<p><code>git init</code></p>
+<p>From inside your chosen directory, where your project is currently located, initialize to make that directory your repository.</p>
+<h2 id="staging">Staging</h2>
+<p>Staging means preparing your files to be committed / save. You can&#39;t commit / save files you didn&#39;t stage. Therefore, before committing your files you must stage them. But how?</p>
+<p><code>git add index.html</code></p>
+<p>The command above tells git to put the <code>index.html</code> to the stage, meaning we want that specific file to be prepared so we can</p>
+
+      </body>
+    </html>
